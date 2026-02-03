@@ -43,10 +43,40 @@ export const signUp = async (req, res) => {
     }
 }
 export const logIn = async (req, res) => {
-    res.send("login router")
+    const { email, password } = req.body;
+    try {
+        if(!email || !password) {
+            throw new Error("All fields required")
+        } 
+
+        const user = await User.findOne({email})
+        if(!user) return res.status(400).json({message: "User not found"})
+
+        const isPassword = await bcryptjs.compare(password, user.password)
+        if(!isPassword) return res.status(400).json({message: "Invalid credentials"})
+
+        user.lastLogin = Date.now();
+
+        await user.save();
+
+        generateTokenAndSetCookie(res, user._id)
+
+        res.status(200).json({
+            success: true,
+            message: "User logged in successfully",
+            user: {
+                ...user._doc,
+                password: undefined
+            }
+        })
+    } catch (error) {
+        console.log("Error logging in", error)
+        res.status(500).json({message: "Internal server error"})
+    }
 }
 export const logOut = async (req, res) => {
-    res.send("logout router")
+    res.clearCookie('token')
+    res.status(200).json({message: "User logged out successfully"})
 }
 export const verifyEmail = async (req, res) => {
     res.send("verifyEmail router")
