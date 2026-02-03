@@ -10,6 +10,7 @@ const userSchema = new mongoose.Schema(
         level: String,
         avatar: String,
         role: { type: String, default: "student"},
+        lastLogin: Date,
         isVerified: { type: Boolean, default: false},
         verificationToken: String,
         verificationTokenExpiresAt: Date,
