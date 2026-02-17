@@ -1,1 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #2D5BFF;
+
+  --color-light-100: #cecefb;
+  --color-light-200: #a8b5db;
+
+  --color-accent: #9ca4ab;
+
+  --color-accent-200: #1A2332;
+
+  --font-dm-sans: DM Sans, sans-serif;
+  --text-sm: 12px;
+
+  --background-image-hero-pattern: url("/hero-bg.png");
+}
+
+@layer base {
+    * {
+        @apply font-dm-sans;
+    }
+
+    .nav-link {
+        @apply text-sm font-medium transition-colors whitespace-nowrap;
+    }
+
+    h1 {
+        @apply font-bold;
+    }
+
+    p {
+        @apply font-medium;
+    }
+}
+
+@layer components {
+    .hero-stat .container {
+        @apply flex items-center gap-4;
+    }
+    .hero-stat .box {
+        @apply size-12 bg-primary/10 rounded-xl flex items-center justify-center;
+    }
+
+    .hero-stat p {
+        @apply text-2xl font-bold text-accent-200;
+    }
+
+    .hero-stat span {
+        @apply text-sm text-[#5A6C7D];
+    }
+}
