@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Features = () => {
   return (
     <section className='min-h-auto px-4 py-24 w-full bg-gray-white'>
@@ -29,8 +30,8 @@ const Features = () => {
                 </div>
 
                 <div className='mt-8 px-4 md:px-10'>
-                    <div className='bg-green-300 rounded-full w-15 px-3 py-2 flex items-center justify-center whitespace-nowrap'>
-                        <span className='text-[12px] text-white'>Learn</span>
+                    <div className='bg-green-300 rounded-full w-18 px-3 py-2 flex items-center justify-center whitespace-nowrap'>
+                        <span className='text-sm text-white'>Learn</span>
                     </div>
                     <h3 className='my-4 font-bold text-3xl'>Curated Learning Articles</h3>
                     <p className='text-[17px] text-gray-500'>Access thousands of well-researched articles covering study techniques, academic skills, and subject-specific content.</p>
@@ -45,8 +46,8 @@ const Features = () => {
                 </div>
 
                 <div className='mt-8 px-4 md:px-10'>
-                    <div className='bg-green-300 rounded-full w-15 px-3 py-2 flex items-center justify-center whitespace-nowrap'>
-                        <span className='text-[12px] text-white'>Connect</span>
+                    <div className='bg-green-300 rounded-full w-18 px-3 py-2 flex items-center justify-center whitespace-nowrap'>
+                        <span className='text-sm text-white'>Connect</span>
                     </div>
                     <h3 className='my-4 font-bold text-3xl'>Student Community</h3>
                     <p className='text-[17px] text-gray-500'>Join a supportive network of peers, share experirnces, ask questions, and collaborate on academic projects.</p>
@@ -61,8 +62,8 @@ const Features = () => {
                 </div>
 
                 <div className='mt-8 px-4 md:px-10'>
-                    <div className='bg-green-300 rounded-full w-15 px-3 py-2 flex items-center justify-center whitespace-nowrap'>
-                        <span className='text-[12px] text-white'>Download</span>
+                    <div className='bg-green-300 rounded-full w-18 px-3 py-2 flex items-center justify-center whitespace-nowrap'>
+                        <span className='text-sm text-white'>Download</span>
                     </div>
                     <h3 className='my-4 font-bold text-3xl'>Resource Library</h3>
                     <p className='text-[17px] text-gray-500'>Download course materials, past questions, study guides, and reference documents organized by department and level.</p>

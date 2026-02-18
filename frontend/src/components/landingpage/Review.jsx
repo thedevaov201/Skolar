@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 const Review = () => {
   return (
     <section className='min-h-auto px-4 py-24 w-full bg-white'>
@@ -8,9 +8,6 @@ const Review = () => {
             <h2 className="text-center text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight">Trusted by Students Across Nigeria</h2>
 
             <div className='mt-20 overflow-hidden md:max-w-xl mx-auto flex flex-col space-y-8'>
-                <div className='bg-green-300 rounded-full w-15 px-3 py-2 flex items-center justify-center whitespace-nowrap'>
-                    <span className='text-sm text-white'>4.8/5.0</span>
-                </div>
                 <p>"SKOLAR has completely transformed how I access learning materials and connect with my peers. 
                     The platform is intuitive, well-organized, and has everything I need in one place. I can easily find relevant articles, download resources for my courses, and engage with a supportive community of students."
                 </p>
@@ -23,8 +20,12 @@ const Review = () => {
                 </div>
             </div>
             <div className=' mt-10 flex items-center justify-end space-x-3 md:max-w-xl mx-auto'>
-              <div className='size-12 border border-gray-200 rounded-xl'></div>
-              <div className='size-12 border border-gray-200 rounded-xl'></div>
+              <div className='size-12 border border-gray-200 rounded-xl flex items-center justify-center hover:bg-gray-900 hover:text-white transition duration-300'>
+                <ArrowLeft size={20} />
+              </div>
+              <div className='size-12 border border-gray-200 rounded-xl flex items-center justify-center hover:bg-gray-900 hover:text-white transition duration-300'>
+                <ArrowRight size={20} />
+              </div>
             </div>
 
         </div>

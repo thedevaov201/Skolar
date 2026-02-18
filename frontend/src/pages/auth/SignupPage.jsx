@@ -1,8 +1,9 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
+import { ArrowLeft } from "lucide-react"
 
-import { useAuthStore } from "../store/AuthStore"
-import Input from "../components/Input"
+import { useAuthStore } from "../../store/AuthStore"
+import Input from "../../components/ui/Input"
 
 const SignupPage = () => {
   const [name, setName] = useState("")
@@ -31,10 +32,13 @@ const SignupPage = () => {
     <div className='w-full min-h-screen flex items-center justify-center px-4 py-8'>
       <div className="md:min-w-sm">
 
-        <div className='text-center'>
-          <h1 className='text-3xl font-bold'>SKOLAR</h1>
-          <p>Create Your Account</p>
-          <span>Join thousands of students already learning on SKOLAR</span>
+        <div>
+          <div className="mb-8 flex items-center justify-center space-x-4">
+            <img src="/skolar-logo.png" className="size-10"/>
+            <h1 className='text-3xl font-bold'>SKOLAR</h1>
+          </div>
+          <h1 className="text-center text-3xl">Create Your Account</h1>
+          <p className="text-center text-gray-500 mt-2">Join thousands of students already learning on SKOLAR</p>
         </div>
 
         <div className='bg-white rounded-sm px-4 md:px-8 pt-8 pb-4 mt-10 shadow-sm border-2 border-gray-100'>
@@ -121,7 +125,8 @@ const SignupPage = () => {
           </form>
         </div>
 
-        <div className="text-center text-sm mt-5 text-gray-500 hover:text-gray-800 transition-colors">
+        <div className="flex items-center justify-center text-sm mt-5 text-gray-500 hover:text-gray-900 transition-colors space-x-2">
+          <ArrowLeft size={15} />
           <Link to={"/"} className="">Back to Home</Link>
         </div>
 
